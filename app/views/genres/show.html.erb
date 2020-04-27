@@ -1,0 +1,32 @@
+<style>
+    h1, p, a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+ 
+<h1>Genre Details:</h1>
+
+<h1>
+    Genre name: <%= @genre.name %>
+</h1>
+
+<p>Songs:</p>
+<ul>
+    <% @genre.songs.each do |song| %>
+        <li>
+            <p><%= song.name %></p>
+        </li>
+    <% end %>
+</ul>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Edit genre', edit_genre_path(@genre) %></p>
+</strong>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Back to all genres', genres_path %></p>
+</strong>

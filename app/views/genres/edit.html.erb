@@ -1,0 +1,20 @@
+<style>
+    h1, p, a, label, input {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+
+<h1>Genre Edit Form</h1>
+
+<%= form_for(@genre) do |f| %>
+    <%= f.label :name, 'Genre name:'%> 
+    <%= f.text_field :name %>
+    <br>
+    <br>
+
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,30 @@
+<style>
+    h1, p, a, label, input {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+
+<h1>Song Form</h1>
+
+<%= form_for(@song) do |f| %>
+    <%= f.label :name, 'Song name:'%> 
+    <%= f.text_field :name %>
+    <br>
+    <br>
+
+    <%= f.label :artist_id, 'Artist ID:'%> 
+    <%= f.text_field :artist_id %>
+    <br>
+    <br>
+
+    <%= f.label :genre_id, 'Genre ID:'%> 
+    <%= f.text_field :genre_id %>
+    <br>
+    <br>
+
+    <%= f.submit %>
+<% end %>

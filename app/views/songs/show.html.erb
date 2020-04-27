@@ -1,0 +1,29 @@
+<style>
+    h1, p, a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+ 
+<h1>Song Details:</h1>
+
+<h1>
+    Song name: <%= @song.name %>
+</h1>
+<p>
+    Written by: <%= link_to @artist.name, artist_path(@artist) %>
+</p>
+<p>
+    Genre: <%= link_to @genre.name, genre_path(@genre) %>
+</p>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Edit song', edit_song_path(@song) %></p>
+</strong>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Back to all songs', songs_path %></p>
+</strong>

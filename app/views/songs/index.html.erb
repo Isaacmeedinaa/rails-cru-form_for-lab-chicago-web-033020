@@ -1,0 +1,21 @@
+<style>
+    h1, p, a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+
+<h1>All Songs:</h1>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Create a new song', new_song_path %></p>
+</strong>
+
+<% @songs.each do |song| %>
+    <p>
+        <%= link_to("#{song.name} by #{song.artist.name}", song_path(song)) %>
+    </p>
+<% end %>

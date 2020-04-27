@@ -1,0 +1,36 @@
+<style>
+    h1, p, a {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+</style>
+ 
+<h1>Artist Details:</h1>
+
+<h1>
+    Artist name: <%= @artist.name %>
+</h1>
+
+<p>
+    Artist Bio: <%= @artist.bio %>
+</p>
+
+<p>Songs:</p>
+<ul>
+    <% @artist.songs.each do |song| %>
+        <li>
+            <p><%= song.name %></p>
+        </li>
+    <% end %>
+</ul>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Edit artist', edit_artist_path(@artist) %></p>
+</strong>
+
+<strong>
+    <p style="font-size: 22px;"><%= link_to 'Back to all artists', artists_path %></p>
+</strong>
